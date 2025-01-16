@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean Boutique</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/0cccbfc09f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="logo">Bean Boutique</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <div class="dropdown">
+              <a id="menuButton"
+                >Menu Selection
+                <i class="fa-solid fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="coffeMenu.html">Coffee</a>
+                <a href="#option2">Option 2</a>
+                <a href="#option3">Option 3</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="brewing-equipment.html">Brewing Equipment</a></li>
+          <li><a href="events.html">Events & Workshops</a></li>
+          <li><a href="special-offers.html">Special Offers</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <video class="backgroundVideo" autoplay loop muted>
+        <source src="video/backgroundVideo.mp4" />
+      </video>
+      <section id="hero">
+        <h2>Welcome to Bean Boutique</h2>
+        <p>Experience the art of coffee.</p>
+        <button class="btn-primary" id="openModal">Special Offer!</button>
+      </section>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Sign up for 10% off!</h2>
+          <form>
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+
+      <section id="featured">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+          <div class="product">
+            <img src="placeholder.jpg" alt="Product 1" />
+            <h3>Product 1</h3>
+            <p>Description of product 1.</p>
+          </div>
+          <section class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slide fade">
+              <img
+                src="image/gallery1.jpg"
+                alt="Coffee Cup"
+                style="width: 100%"
+              />
+              <div class="caption">Enjoy the Perfect Cup</div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide fade">
+              <img
+                src="image/gallery2.jpg"
+                alt="Coffee Beans"
+                style="width: 100%"
+              />
+              <div class="caption">Freshly Roasted Beans</div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide fade">
+              <img
+                src="image/gallery3.jpg"
+                alt="Coffee Equipment"
+                style="width: 100%"
+              />
+              <div class="caption">Premium Brewing Equipment</div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+          </section>
+        </div>
+      </section>
+
+      <section
+        class="section-4 responsive-container common-padding"
+        id="section-4"
+      >
+        <h2 class="section-4__h2 black-clr text-center">
+          Discover Your Perfect Cup of Coffee Today!
+        </h2>
+        <p class="section-4__p black-clr text-center">
+          Savor rich aromas for your ultimate coffee experience.
+        </p>
+        <div class="section-4__img-div">
+          <img src="image/section-4-img-1.webp" alt="Section 4 Image 1" />
+          <img src="image/section-4-img-2.webp" alt="Section 4 Image 2" />
+          <img src="image/section-4-img-3.webp" alt="Section 4 Image 3" />
+          <img src="image/section-4-img-4.webp" alt="Section 4 Image 4" />
+          <img src="image/section-4-img-5.webp" alt="Section 4 Image 5" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Bean Boutique</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
