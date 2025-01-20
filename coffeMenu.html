@@ -1,103 +1,251 @@
-<section class="section-3 responsive-container common-padding" id="section-3">
-  <h2 class="section-3__h2 black-clr text-center">What kind of Coffee we serve for you</h2>
-  <p class="section-3__p black-clr text-center">Who are in extremely love with eco friendly system.</p>
-  <div class="section-3__card-main-div">
-      <div class="section-3__card black-clr">
-          <div class="section-3__coffee-descp">
-              <h3>Cappuccino</h3>
-              <p>$90</p>
-          </div>
-          <p>Creamy espresso topped with frothed milk, served hot in a cup.</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean Boutique</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/0cccbfc09f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="cart-container">
+      <button class="btn-icon btn-close" onclick="closeCart()">
+        <i class="fa-solid fa-x"></i>
+      </button>
+      <h2>Cart</h2>
+      <ul></ul>
+      <div class="price-container">
+        Total:
+        <span class="price-tag"></span>
       </div>
-      <div class="section-3__card black-clr">
-          <div class="section-3__coffee-descp">
-              <h3>Americano</h3>
-              <p>$69</p>
-          </div>
-          <p>Strong espresso diluted with hot water, delivering a bold flavor profile.</p>
-      </div>
-      <div class="section-3__card black-clr">
-          <div class="section-3__coffee-descp">
-              <h3>Espresso</h3>
-              <p>$49</p>
-          </div>
-          <p>Robust, concentrated coffee brewed by forcing hot water through fine grounds.</p>
-      </div>
-      <div class="section-3__card black-clr">
-          <div class="section-3__coffee-descp">
-              <h3>Macchiato</h3>
-              <p>$87</p>
-          </div>
-          <p>Espresso with a splash of steamed milk; bold yet balanced.</p>
-      </div>
-      <div class="section-3__card black-clr">
-          <div class="section-3__coffee-descp">
-              <h3>Mocha</h3>
-              <p>$62</p>
-          </div>
-          <p>Espresso with chocolate and steamed milk; rich and indulgent.</p>
-      </div>
-      <div class="section-3__card black-clr">
-          <div class="section-3__coffee-descp">
-              <h3>Coffee Latte</h3>
-              <p>$26</p>
-          </div>
-          <p>Espresso with creamy steamed milk; smooth and comforting.</p>
-      </div>
-      <div class="section-3__card black-clr">
-          <div class="section-3__coffee-descp">
-              <h3>Piccolo Latte</h3>
-              <p>$59</p>
-          </div>
-          <p>Small latte with a strong espresso base, topped with a dollop.</p>
-      </div>
-      <div class="section-3__card black-clr">
-          <div class="section-3__coffee-descp">
-              <h3>Ristretto</h3>
-              <p>$79</p>
-          </div>
-          <p>Intensely flavored espresso shot with less water, offering a concentrated brew.</p>
-      </div>
-      <div class="section-3__card black-clr">
-          <div class="section-3__coffee-descp">
-              <h3>Affogato</h3>
-              <p>$99</p>
-          </div>
-          <p>Espresso poured over vanilla ice cream, creating a delightful coffee dessert.</p>
-      </div>
-  </div>
-</section>
-
-
-
-
-<section class="coffee-selection">
-    <h2>Our Coffee Selection</h2>
-    <div class="coffee-grid">
-      <div class="coffee-item">
-        <img src="/Test/image/SlideShowImage/gallery1.jpg" alt="Ethiopian Blend">
-        <h3>Ethiopian Blend</h3>
-        <p>Bright, fruity notes with a hint of citrus.</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="coffee-item">
-        <img src="/Test/image/SlideShowImage/gallery2.jpg" alt="Colombian Dark Roast">
-        <h3>Colombian Dark Roast</h3>
-        <p>Rich and bold with deep chocolate undertones.</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="coffee-item">
-        <img src="/Test/image/SlideShowImage/gallery3.jpg" alt="Sumatra Single Origin">
-        <h3>Sumatra Single Origin</h3>
-        <p>Earthy, full-bodied flavor with low acidity.</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="coffee-item">
-        <img src="/Test/image/SlideShowImage/gallery4.jpg" alt="Costa Rican">
-        <h3>Costa Rican</h3>
-        <p>Well-balanced with a touch of honey sweetness.</p>
-        <button>Add to Cart</button>
+      <div class="btns">
+        <button class="btn-secondary" onclick="clearCart()">Clear Cart</button>
+        <button class="btn-primary">Check Out</button>
       </div>
     </div>
-  </section>
-  
+    <header>
+      <div>
+        <h1 class="logo">Bean Boutique</h1>
+        <button class="btn-icon btn-cart" onclick="openCart()">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </button>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <div class="dropdown">
+              <a id="menuButton">
+                Menu
+                <i class="fa-solid fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="coffeMenu.html">Coffee</a>
+                <a href="brewing-equipment.html">Brewing Equipment</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="special-offers.html">Offers</a></li>
+          <li><a href="contactUs.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="section-3 responsive-container common-padding"
+        id="section-3"
+      >
+        <h2 class="section-3__h2 black-clr text-center">Coffee Menu</h2>
+        <div class="section-3__card-main-div">
+          <div class="section-3__card black-clr">
+            <img src="image/gallery2.jpg" alt="Colombian Dark Roast" />
+            <div class="section-3__coffee-descp">
+              <h3>Cappuccino</h3>
+              <p>$90</p>
+            </div>
+            <p>
+              Creamy espresso topped with frothed milk, served hot in a cup.
+            </p>
+            <button class="btn-primary" onclick="addToCart('Cappuccino', 90)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="section-3__card black-clr">
+            <img src="image/gallery2.jpg" alt="Colombian Dark Roast" />
+            <div class="section-3__coffee-descp">
+              <h3>Americano</h3>
+              <p>$69</p>
+            </div>
+            <p>
+              Strong espresso diluted with hot water, delivering a bold flavor
+              profile.
+            </p>
+            <button class="btn-primary" onclick="addToCart('Americano', 69)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="section-3__card black-clr">
+            <img src="image/gallery2.jpg" alt="Colombian Dark Roast" />
+            <div class="section-3__coffee-descp">
+              <h3>Espresso</h3>
+              <p>$49</p>
+            </div>
+            <p>
+              Robust, concentrated coffee brewed by forcing hot water through
+              fine grounds.
+            </p>
+            <button class="btn-primary" onclick="addToCart('Espresso', 49)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="section-3__card black-clr">
+            <img src="image/gallery2.jpg" alt="Colombian Dark Roast" />
+            <div class="section-3__coffee-descp">
+              <h3>Macchiato</h3>
+              <p>$87</p>
+            </div>
+            <p>Espresso with a splash of steamed milk; bold yet balanced.</p>
+            <button class="btn-primary" onclick="addToCart('Macchiato', 87)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="section-3__card black-clr">
+            <img src="image/gallery2.jpg" alt="Colombian Dark Roast" />
+            <div class="section-3__coffee-descp">
+              <h3>Mocha</h3>
+              <p>$62</p>
+            </div>
+            <p>Espresso with chocolate and steamed milk; rich and indulgent.</p>
+            <button class="btn-primary" onclick="addToCart('Mocha', 62)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="section-3__card black-clr">
+            <img src="image/gallery2.jpg" alt="Colombian Dark Roast" />
+            <div class="section-3__coffee-descp">
+              <h3>Coffee Latte</h3>
+              <p>$26</p>
+            </div>
+            <p>Espresso with creamy steamed milk; smooth and comforting.</p>
+            <button class="btn-primary" onclick="addToCart('Latte', 26)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="section-3__card black-clr">
+            <img src="image/gallery2.jpg" alt="Colombian Dark Roast" />
+            <div class="section-3__coffee-descp">
+              <h3>Piccolo Latte</h3>
+              <p>$59</p>
+            </div>
+            <p>
+              Small latte with a strong espresso base, topped with a dollop.
+            </p>
+            <button
+              class="btn-primary"
+              onclick="addToCart('Piccolo Latte', 59)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="section-3__card black-clr">
+            <img src="image/gallery2.jpg" alt="Colombian Dark Roast" />
+            <div class="section-3__coffee-descp">
+              <h3>Ristretto</h3>
+              <p>$79</p>
+            </div>
+            <p>
+              Intensely flavored espresso shot with less water, offering a
+              concentrated brew.
+            </p>
+            <button class="btn-primary" onclick="addToCart('Ristretto', 79)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="section-3__card black-clr">
+            <img src="image/gallery2.jpg" alt="Colombian Dark Roast" />
+            <div class="section-3__coffee-descp">
+              <h3>Affogato</h3>
+              <p>$99</p>
+            </div>
+            <p>
+              Espresso poured over vanilla ice cream, creating a delightful
+              coffee dessert.
+            </p>
+            <button class="btn-primary" onclick="addToCart('Affogato', 99)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="coffee-selection">
+        <h2>Our Coffee Selection</h2>
+        <div class="coffee-grid">
+          <div class="coffee-item">
+            <img src="image/gallery1.jpg" alt="Ethiopian Blend" />
+            <h3>Ethiopian Blend</h3>
+            <p>Bright, fruity notes with a hint of citrus.</p>
+            <button
+              class="btn-primary"
+              onclick="addToCart('Ethiopian Blend', 90)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="coffee-item">
+            <img src="image/gallery2.jpg" alt="Colombian Dark Roast" />
+            <h3>Colombian Dark Roast</h3>
+            <p>Rich and bold with deep chocolate undertones.</p>
+            <button
+              class="btn-primary"
+              onclick="addToCart('Colombian Dark Roast', 90)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="coffee-item">
+            <img src="image/gallery3.jpg" alt="Sumatra Single Origin" />
+            <h3>Sumatra Single Origin</h3>
+            <p>Earthy, full-bodied flavor with low acidity.</p>
+            <button
+              class="btn-primary"
+              onclick="addToCart('Sumatra Single Origin', 90)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="coffee-item">
+            <img src="image/gallery4.webp" alt="Costa Rican" />
+            <h3>Costa Rican</h3>
+            <p>Well-balanced with a touch of honey sweetness.</p>
+            <button class="btn-primary" onclick="addToCart('Costa Rican', 90)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Bean Boutique</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
